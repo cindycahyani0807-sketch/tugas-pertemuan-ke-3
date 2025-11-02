@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Komunitas Teknologi</title>
+</head>
+<body>
+  <!-- Judul halaman -->
+  <h1>Formulir Pendaftaran Komunitas Teknologi</h1>
+
+  <!-- Awal form pendaftaran -->
+  <!-- 'autocomplete="on"' agar browser bisa menyimpan dan otomatis mengisi data -->
+  <form action="submit.html" method="post" enctype="multipart/form-data" autocomplete="on">
+
+    <!-- Bagian 1: Data Pribadi -->
+    <fieldset>
+      <legend>Data Pribadi</legend>
+
+      <!-- Input nama lengkap (autocomplete aktif untuk nama) -->
+      <label>Nama Lengkap:</label><br>
+      <input type="text" name="nama" placeholder="Masukkan nama lengkap" required autocomplete="name"><br><br>
+
+      <!-- Input email (autocomplete aktif untuk email) -->
+      <label>Alamat Email:</label><br>
+      <input type="email" name="email" placeholder="contoh@email.com" required autocomplete="email"><br><br>
+
+      <!-- Input password (autocomplete aktif untuk password baru) -->
+      <label>Kata Sandi:</label><br>
+      <input type="password" name="password" placeholder="Minimal 8 karakter" minlength="8" required autocomplete="new-password"><br><br>
+
+      <!-- Input usia (angka) -->
+      <label>Usia:</label><br>
+      <input type="number" name="usia" min="25" max="40" required><br><br>
+
+      <!-- Input tanggal lahir (autocomplete aktif untuk tanggal lahir) -->
+      <label>Tanggal Lahir:</label><br>
+      <input type="date" name="tanggal" required autocomplete="bday"><br><br>
+
+      <!-- Input jenis kelamin -->
+      <label>Jenis Kelamin:</label><br>
+      <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+      <input type="radio" name="gender" value="Perempuan"> Perempuan<br><br>
+    </fieldset>
+
+    <!-- Bagian 2: Informasi Tambahan -->
+    <fieldset>
+      <legend>Informasi Tambahan</legend>
+
+      <!-- Checkbox pilihan minat -->
+      <label>Minat:</label><br>
+      <input type="checkbox" name="minat" value="AI"> AI
+      <input type="checkbox" name="minat" value="Web"> Web
+      <input type="checkbox" name="minat" value="IoT"> IoT
+      <input type="checkbox" name="minat" value="Game"> Game<br><br>
+
+      <!-- Input nomor telepon (autocomplete aktif untuk telp) -->
+      <label>Nomor Telepon:</label><br>
+      <input type="tel" name="telepon" placeholder="081234567890" pattern="[0-9]{10,13}" required autocomplete="tel"><br><br>
+
+      <!-- Input link portofolio (autocomplete aktif untuk URL) -->
+      <label>Link Portofolio:</label><br>
+      <input type="url" name="portfolio" placeholder="https://contoh.com" autocomplete="url"><br><br>
+
+      <!-- Input upload foto profil -->
+      <label>Upload Foto Profil:</label><br>
+      <input type="file" name="foto" accept="image/*"><br><br>
+    </fieldset>
+
+    <!-- Tombol reset dan submit -->
+    <!-- Tombol reset akan menghapus semua data yang sudah diisi -->
+    <input type="reset" value="Reset">
+    <!-- Tombol submit untuk mengirimkan data form ke submit.html -->
+    <input type="submit" value="Submit">
+
+  </form>
+  <!-- Akhir form -->
+</body>
+</html>
